@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice DOM</title>
+</head>
+<body>
+    <p id="text-box">
+        The Dog can junp but the fox cant
+    </p>
+    </p>
+    <script>
+        //create a webpage theta displays the font size when button is clicked
+
+        const sizes =[
+            {name: "Small", size:"5px"},
+            {name: "Meadium", size:"10px"},
+            {name: "Large", size:"24px"},
+            {name: "X-Large", size:"32px"},
+            {name: "Huge", size:"48px"}
+        ]
+
+        let p = document.getElementById("text-box");
+        
+         for(let i=0; i < sizes.length; i++){
+            const btn = document.createElement("button");
+            btn.textContent = sizes[i].name;
+
+            btn.onclick = function(){
+                p.style.fontSize = sizes[i].size;
+            }
+            p.appendChild(btn);
+        };
+
+    </script>
+</body>
+</html>
